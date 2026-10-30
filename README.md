@@ -1,4 +1,4 @@
-# pi-two-diff-extension
+# pi-two-way-diff-extension
 
 A [Pi](https://github.com/earendil-works/pi) extension that adds a **`/diff`** slash command: a
 file-picker over all open changes in the current working directory, followed by
@@ -41,7 +41,7 @@ one of the following, depending on how often you want to use it.
 Run Pi with the `--extension` flag, pointing at the local file:
 
 ```bash
-cd /path/to/pi_two_diff_extension
+cd /path/to/pi_two_way_diff_extension
 pi --extension ./index.ts
 ```
 
@@ -52,7 +52,7 @@ Symlink (or copy) the project folder into your Pi user extensions directory:
 ```bash
 # ~/.pi/extensions/ by default, or $PI_CODING_AGENT_DIR/extensions/
 mkdir -p ~/.pi/extensions
-ln -s "$(pwd)" ~/.pi/extensions/pi-two-diff-extension
+ln -s "$(pwd)" ~/.pi/extensions/pi-two-way-diff-extension
 ```
 
 Then just start Pi normally:
@@ -71,7 +71,7 @@ Drop a symlink into the project's `.pi/extensions/` directory:
 
 ```bash
 mkdir -p .pi/extensions
-ln -s /path/to/pi_two_diff_extension .pi/extensions/pi-two-diff-extension
+ln -s /path/to/pi_two_way_diff_extension .pi/extensions/pi-two-way-diff-extension
 ```
 
 Project extensions require project trust (Pi will prompt the first time).
@@ -400,7 +400,7 @@ node \
 Project layout:
 
 ```
-pi_two_diff_extension/
+pi_two_way_diff_extension/
 ├── index.ts                      /diff command + list ↔ diff flow
 ├── src/
 │   ├── types.ts                  FileDiff, Hunk, ViewMode, …
